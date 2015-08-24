@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package proto;
+
+service TalkMessage {
+	// a hello world test
+	rpc GetHelloWorld(Msg) returns (Msg){}
+
+	// a hello world streaming test
+	rpc LetsStreaming(stream Msg) returns (stream Msg){}
+}
+
+
+message Msg {
+	string content = 1;
+}
+
+
